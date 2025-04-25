@@ -1,2 +1,5 @@
 # Ignore files
 SecretKeys.h
+
+#Ignore folders
+.theia/

@@ -1,0 +1,41 @@
+{
+  "name": "RGBController",
+  "description": "Controls RGB Lights",
+  "deviceTypeId": "5ff0b112994fd31b7d5e8065",
+  "capabilities": [
+    {
+      "id": "5ff0b41b994fd31b7d5e8961",
+      "mode": {
+        "instanceId": "modeInstance1",
+        "locale": "en-US",
+        "modeName": "Effect",
+        "nonControllable": false,
+        "modeValues": [
+          "Off",
+          "White",
+          "Maximum Speed",
+          "Medium Speed",
+          "Minimum Speed",
+          "Maximum Brightness",
+          "Medium Brightness",
+          "Minimum Brightness",
+          "Random",
+          "Multi Dynamic",
+          "Rainbow",
+          "Rainbow Cycle",
+          "Theatre",
+          "Twinkle",
+          "Blink",
+          "Colour Sweep",
+          "Ambulance",
+          "Running",
+          "Firework",
+          "Merry Christmas",
+          "Circus",
+          "Halloween",
+          "Round Robin"
+        ]
+      }
+    }
+  ]
+}
