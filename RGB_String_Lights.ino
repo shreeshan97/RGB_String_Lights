@@ -69,27 +69,27 @@ void processCommands(void)
   {
     if (globalModes["modeInstance1"] == "Off") { ws2812fx.stop(); rgbControl.effect = eEFFECT_STATIC; rgbControl.cycle = false; }
     if (globalModes["modeInstance1"] == "White") { rgbControl.colour = WHITE; rgbControl.effect = eEFFECT_STATIC; rgbControl.cycle = false; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Maximum_Speed") { rgbControl.brightness = MAX_SPEED; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Medium_Speed") { rgbControl.brightness = MID_SPEED; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Minimum_Speed") { rgbControl.brightness = MIN_SPEED; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Maximum_Brightness") { rgbControl.brightness = MAX_BRIGHTNESS; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Medium_Brightness") { rgbControl.brightness = MID_BRIGHTNESS; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Minimum_Brightness") { rgbControl.brightness = MIN_BRIGHTNESS; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Fast") { rgbControl.speed = MAX_SPEED; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Medium") { rgbControl.speed = MID_SPEED; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Slow") { rgbControl.speed = MIN_SPEED; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Brightest") { rgbControl.brightness = MAX_BRIGHTNESS; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Bright") { rgbControl.brightness = MID_BRIGHTNESS; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Dim") { rgbControl.brightness = MIN_BRIGHTNESS; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Random") { rgbControl.effect = eEFFECT_RANDOM; rgbControl.cycle = false; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Multi_Dynamic") { rgbControl.effect = eEFFECT_MULTI_DYNAMIC; rgbControl.cycle = false; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Dynamic") { rgbControl.effect = eEFFECT_MULTI_DYNAMIC; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Rainbow") { rgbControl.effect = eEFFECT_RAINBOW; rgbControl.cycle = false; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Rainbow_Cycle") { rgbControl.effect = eEFFECT_RAINBOW_CYCLE; rgbControl.cycle = false; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Circle") { rgbControl.effect = eEFFECT_RAINBOW_CYCLE; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Theatre") { rgbControl.effect = eEFFECT_THEATER_CHASE; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Twinkle") { rgbControl.effect = eEFFECT_TWINKLE; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Blink") { rgbControl.effect = eEFFECT_BLINK; rgbControl.cycle = false; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Colour_Sweep") { rgbControl.effect = eEFFECT_COLOUR_SWEEP; rgbControl.cycle = false; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Sweep") { rgbControl.effect = eEFFECT_COLOUR_SWEEP; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Ambulance") { rgbControl.effect = eEFFECT_AMBULANCE; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Running") { rgbControl.effect = eEFFECT_RUNNING; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Firework") { rgbControl.effect = eEFFECT_FIREWORK; rgbControl.cycle = false; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Merry_Christmas") { rgbControl.effect = eEFFECT_MERRY_CHRISTMAS; rgbControl.cycle = false; rgbControl.flag = true; }  
+    if (globalModes["modeInstance1"] == "Christmas") { rgbControl.effect = eEFFECT_MERRY_CHRISTMAS; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Circus") { rgbControl.effect = eEFFECT_CIRCUS; rgbControl.cycle = false; rgbControl.flag = true; }  
     if (globalModes["modeInstance1"] == "Halloween") { rgbControl.effect = eEFFECT_HOLLOWEEN; rgbControl.cycle = false; rgbControl.flag = true; }  
-    if (globalModes["modeInstance1"] == "Round_Robin") { ws2812fx.start(); rgbControl.effect = eEFFECT_STATIC; rgbControl.cycle = true; }  
+    if (globalModes["modeInstance1"] == "Cycle") { ws2812fx.start(); rgbControl.effect = eEFFECT_STATIC; rgbControl.cycle = true; }  
     last_command = globalModes["modeInstance1"];
   }
 }
@@ -121,7 +121,7 @@ void setupRGB(void)
   ws2812fx.setBrightness(rgbControl.brightness);
   ws2812fx.setSpeed(rgbControl.speed);
   ws2812fx.setColor(rgbControl.colour);
-  ws2812fx.start();
+  ws2812fx.stop();
 }
 
 void updateRGB(void)
@@ -155,7 +155,7 @@ void roundRobin(void)
   static unsigned long last_change = 0U;
   if(rgbControl.cycle && (millis() - last_change > CYCLE_TIME))
   {
-    if(rgbControl.effect++ >= eEFFECT_LAST)
+    if(rgbControl.effect++ > eEFFECT_LAST)
     {
       rgbControl.effect = 1U;
     }

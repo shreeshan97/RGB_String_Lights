@@ -98,28 +98,31 @@ SecretKeys.h
 
 ## 🌟 Supported Lighting Modes
 
-| Mode Name           | Description                   |
-|---------------------|-------------------------------|
-| Off                 | Turn off LEDs                 |
-| White               | Solid white color             |
-| Maximum_Brightness  | Full brightness               |
-| Medium_Brightness   | Medium brightness             |
-| Minimum_Brightness  | Dimmed LEDs                   |
-| Rainbow             | Rainbow flowing animation     |
-| Rainbow_Cycle       | Rainbow cycle around strip    |
-| Theatre             | Theater chasing lights        |
-| Twinkle             | Random sparkle effect         |
-| Blink               | Simple blinking               |
-| Colour_Sweep        | Smooth color sweep            |
-| Ambulance           | Emergency flashing            |
-| Firework            | Firework sparkle              |
-| Merry_Christmas     | Christmas-themed colors       |
-| Halloween           | Halloween colors              |
-| Circus              | Vibrant rotating colors       |
-| Random              | Random flicker                |
-| Running             | Running pixel                 |
-| Multi_Dynamic       | Multicolor dynamic            |
-| Round_Robin         | Auto-cycling effects          |
+| Mode Name     | Description                     |
+|---------------|---------------------------------|
+| Off           | Turn off LEDs                   |
+| White         | Solid white color               |
+| Fast          | Set maximum speed               |
+| Medium        | Set medium speed                |
+| Slow          | Set minimum speed               |
+| Brightest     | Set maximum brightness          |
+| Bright        | Set medium brightness           |
+| Dim           | Set minimum brightness          |
+| Random        | Random flicker effect           |
+| Dynamic       | Multicolor dynamic effect       |
+| Rainbow       | Flowing rainbow animation       |
+| Circle        | Rainbow cycle around strip      |
+| Theatre       | Theater chasing lights          |
+| Twinkle       | Random sparkle effect           |
+| Blink         | Simple blinking lights          |
+| Sweep         | Smooth color sweep              |
+| Ambulance     | Emergency flashing lights       |
+| Running       | Running pixel animation         |
+| Firework      | Firework sparkle effect         |
+| Christmas     | Christmas-themed colors         |
+| Circus        | Vibrant rotating colors         |
+| Halloween     | Halloween-themed colors         |
+| Cycle         | Auto-cycling through effects    |
 
 ---
 

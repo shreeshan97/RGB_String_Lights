@@ -13,27 +13,27 @@
         "modeValues": [
           "Off",
           "White",
-          "Maximum_Speed",
-          "Medium_Speed",
-          "Minimum_Speed",
-          "Maximum_Brightness",
-          "Medium_Brightness",
-          "Minimum_Brightness",
+          "Fast",
+          "Medium",
+          "Slow",
+          "Brightest",
+          "Bright",
+          "Dim",
           "Random",
-          "Multi_Dynamic",
+          "Dynamic",
           "Rainbow",
-          "Rainbow_Cycle",
+          "Circle",
           "Theatre",
           "Twinkle",
           "Blink",
-          "Colour_Sweep",
+          "Sweep",
           "Ambulance",
           "Running",
           "Firework",
-          "Merry_Christmas",
+          "Christmas",
           "Circus",
           "Halloween",
-          "Round_Robin"
+          "Cycle"
         ]
       }
     }

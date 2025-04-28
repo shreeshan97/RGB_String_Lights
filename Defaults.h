@@ -9,9 +9,9 @@
 #define MIN_BRIGHTNESS  25U
 
 // Speed values of the LED effects
-#define MAX_SPEED       800U
-#define MID_SPEED       500U
-#define MIN_SPEED       200U
+#define MAX_SPEED       1000U
+#define MID_SPEED       1500U
+#define MIN_SPEED       2000U
 
 // Serial Console Baud Rate
 #define BAUD_RATE       115200
